@@ -98,7 +98,7 @@ header {
 }
 .sign-in:hover {
     cursor: pointer;
-    background-color: #f20000;
+    background-color: #cf0000;
 }
 
 /*----------- INTRO   ----------*/
@@ -165,7 +165,7 @@ header {
 }
 .try:hover {
     cursor: pointer;
-    background-color: #f20000;
+    background-color: #cf0000;
 }
 /*----------  MAIN     ---------*/
 
