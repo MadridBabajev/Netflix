@@ -138,26 +138,46 @@ header {
 .ready {
     font-size: 18px;
 }
-/* MAKE ANIMATED EMAIL ADDRESS */
+.emailButtonMain {
+    margin-bottom: 0;
+}
+.emailButtonDesktop {
+    display: none;
+}
 .email-box {
     position: relative;
 }
 #email {
-    padding: 10px 120px 10px 10px
+    padding: 13px 190px 13px 10px;
+    box-shadow: none;
+    border-color: transparent;
+    font-size: 12px;
+    margin-bottom: 0;
 }
-.email-text::after {
-    content: "Email address";
-    position: absolute;
-    color: #928b8a;
-    left: 0;
-    transform: translate(4px, 10px);
-    pointer-events: none;
+.email-label {
+    font-size: 14px;
+    opacity: 1;
+    display: block;
+    color:#aaaaaa;
+    transform-origin: 0 0;
+    transform: translate(-120px,-30px);
+    transition: all .3s;
 }
+
+#email:focus {
+    outline: none;
+}
+#email:focus + .email-label,
+#email:not(:placeholder-shown) + .email-label {
+    transform: translate(-85px, -39px) scale(0.7);
+    font-weight: bold;
+}
+
 .try {
     font-size: 1rem;
     color: white;
     background-color: red;
-    padding: 20px;
+    padding: 12px 20px;
     border: solid 1px transparent;
     border-radius: 2px;
     font-weight: 500;
@@ -167,6 +187,55 @@ header {
     cursor: pointer;
     background-color: #cf0000;
 }
+
+@media (min-width: 950px) {
+    .emailButtonMain {
+        display: none;
+    }
+    .emailButtonDesktop {
+        display: flex;
+    }
+    .email-box-desktop {
+        width: 60%;
+
+    }
+    .button-box-desktop {
+        width: 40%;
+    }
+    #email1 {
+        padding: 15px 130px 15px 10px;
+        border: transparent;
+        transform-origin: 0 0;
+        font-size: 13px;
+        transition: all .3s;
+    }
+    #email1:focus {
+        outline: none;
+    }
+    #email1:focus + .email-label1,
+    #email1:not(:placeholder-shown) + .email-label1 {
+        font-weight: bold;
+        transform: translate(5px, -42px) scale(0.75);
+
+    }
+
+
+
+    .try1 {
+        transform: translateX(8px);
+        padding: 13px 20px;
+    }
+    .email-label1 {
+        display: block;
+        opacity: 1;
+        color: rgba(0,0,0, 0.4);
+        transform: translate(5px, -30px);
+        transition: all .3s;
+        transform-origin: 0 0;
+    }
+}
+
+
 /*----------  MAIN     ---------*/
 
 
