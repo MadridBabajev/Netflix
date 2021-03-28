@@ -445,40 +445,98 @@ img {
     text-align: center;
 }
 
-.question-box {
+.question-box-general {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: start;
-    border: white 1px solid;
     width: 80%;
     line-height: 45px;
     font-size: 1.7em;
 }
-.question, .hidden-answer {
+.hidden-answer {
     margin: 5px 0;
     padding-left: 40px;
-    width: 100%;
+    width: 90%;
+    position: relative;
 }
-.question-block {
+.question {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+.the-question {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    pointer-events: none;
+}
+
+.question-block, .close-question {
     display: inline-block;
     text-decoration: inherit;
     font-size: inherit;
     color: inherit;
     width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.question-box {
+    position: relative;
+    background: #303030;
+    width: 100%;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.cross {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65px;
+}
+
+.cross-container {
+    transform-origin: 0 0;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 60px;
+    top: -93px;
+    pointer-events: none;
+}
+.cross-icon {
+    fill: white;
+    width: 50px;
 }
 .hidden-answer {
-    visibility: hidden;
+    display: none;
 }
-.question-block:target + .hidden-answer {
-    visibility: visible;
+.hidden-answer:target {
+    display: block;
 }
+.hidden-answer:target + .cross {
+    display: inline-block;
+    width: 100%;
+}
+.hidden-answer:target + .cross + .cross-container {
+    transform: rotateZ(45deg) translate(78px, -45px);
 
+}
+.close-question {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 
-
-
-
-
+}
+.small-split {
+    height: 1px;
+    background: black;
+    width: 100%;
+}
 
 
 
