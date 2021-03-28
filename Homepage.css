@@ -440,7 +440,7 @@ img {
     align-items: center;
 }
 
-.h1-questionsections {
+.h1-question-sections {
     font-size: 2.5rem;
     text-align: center;
 }
@@ -454,10 +454,19 @@ img {
     line-height: 45px;
     font-size: 1.7em;
 }
+
+.question-box {
+    position: relative;
+    background: #303030;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
 .hidden-answer {
     margin: 5px 0;
     padding-left: 40px;
-    width: 90%;
+    width: 85%;
     position: relative;
 }
 .question {
@@ -467,8 +476,8 @@ img {
 }
 .the-question {
     position: absolute;
-    left: 40px;
-    top: 10px;
+    left: 30px;
+    top: 15px;
     pointer-events: none;
 }
 
@@ -482,14 +491,6 @@ img {
     position: relative;
 }
 
-
-.question-box {
-    position: relative;
-    background: #303030;
-    width: 100%;
-    margin-bottom: 5px;
-    box-sizing: border-box;
-}
 
 .cross {
     display: none;
@@ -523,7 +524,7 @@ img {
     width: 100%;
 }
 .hidden-answer:target + .cross + .cross-container {
-    transform: rotateZ(45deg) translate(78px, -45px);
+    transform: rotateZ(45deg) translate(85px, -50px);
 
 }
 .close-question {
@@ -538,10 +539,40 @@ img {
     width: 100%;
 }
 
+.question-p {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 0 20px;
+}
 
+@media (max-width: 720px) {
+    .question-box {
+        font-size: 1.125rem;
+        line-height: 1.95rem;
+    }
+    .cross-icon {
+        width: 35px;
+    }
+    .question {
+        height: 55px
+    }
+    .cross-container {
+        top: -98px;
+    }
+    .h1-question-sections {
+        font-size: 1.625rem;
+    }
+}
 
+  /*=====================
+        ANIMATED EMAIL [QUESTIONS]
+  =====================*/
 
-
+.subscription-question {
+    display: flex;
+    justify-content: space-around;
+}
 
 
 
